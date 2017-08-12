@@ -3,9 +3,9 @@ title: 安装Devstack和Skydive遇到错误的解决办法
 date: 2017-08-12 11:15:11
 tags:
 ---
-- 小组三个人装skydive装了一个星期。不完全总结一下遇到的坑。。
+小组三个人装skydive装了一个星期。不完全总结一下遇到的坑。。
 
-# devstack
+## Devstack
 
 - 代理问题
 
@@ -17,6 +17,8 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
+
+<!--more-->
 
 - 权限问题
 
@@ -33,7 +35,6 @@ chmod 770 devstack
 sudo chmod -R 777 xxx
 ```
 
-<!--more-->
 
 - centos系统可能与Ubuntu出现的问题还不一样
 
@@ -49,7 +50,7 @@ sudo pip install -U os-testr
 ---
 
 
-# skydive
+## Skydive
 
 ### make install
 

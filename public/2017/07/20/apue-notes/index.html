@@ -94,20 +94,20 @@
 
 
 
-<meta name="description" content="学习路线 linux 内核模块 Unix基础知识输入和输出 文件描述符（小的非负整数）  内核用以表示一个特定进程 正在访问当前的文件。当内核打开文件或创建时，返回一个文件描述符。  每当运行一个新程序，shell返回3个文件描述符：标准输入，标准输出，标准错误。">
+<meta name="description" content="学习路线  linux 内核模块">
 <meta property="og:type" content="article">
-<meta property="og:title" content="apue">
-<meta property="og:url" content="http://yoursite.com/20170720/apue/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="学习路线 linux 内核模块 Unix基础知识输入和输出 文件描述符（小的非负整数）  内核用以表示一个特定进程 正在访问当前的文件。当内核打开文件或创建时，返回一个文件描述符。  每当运行一个新程序，shell返回3个文件描述符：标准输入，标准输出，标准错误。">
+<meta property="og:title" content="APUE学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/07/20/apue-notes/index.html">
+<meta property="og:site_name" content="HelloC">
+<meta property="og:description" content="学习路线  linux 内核模块">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="c:/Users/z00423761/Pictures/学习路线.jpg">
 <meta property="og:image" content="c:/Users/z00423761/Pictures/linux内核模块.png">
 <meta property="og:image" content="c:/Users/z00423761/Pictures/系统调用.png">
-<meta property="og:updated_time" content="2017-08-12T06:28:51.488Z">
+<meta property="og:updated_time" content="2017-08-12T11:06:17.896Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="apue">
-<meta name="twitter:description" content="学习路线 linux 内核模块 Unix基础知识输入和输出 文件描述符（小的非负整数）  内核用以表示一个特定进程 正在访问当前的文件。当内核打开文件或创建时，返回一个文件描述符。  每当运行一个新程序，shell返回3个文件描述符：标准输入，标准输出，标准错误。">
+<meta name="twitter:title" content="APUE学习笔记">
+<meta name="twitter:description" content="学习路线  linux 内核模块">
 <meta name="twitter:image" content="c:/Users/z00423761/Pictures/学习路线.jpg">
 
 
@@ -137,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/20170720/apue/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/20/apue-notes/"/>
 
 
 
 
 
-  <title>apue | Hexo</title>
+  <title>APUE学习笔记 | HelloC</title>
   
 
 
@@ -173,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">HelloC</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -208,22 +208,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -260,16 +260,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/20170720/apue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/apue-notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xixi Zhao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="HelloC">
     </span>
 
     
@@ -277,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">apue</h1>
+          <h1 class="post-title" itemprop="name headline">APUE学习笔记</h1>
         
 
         <div class="post-meta">
@@ -327,9 +327,12 @@
       
 
       
-        <h4 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h4><p><img src="C:/Users/z00423761/Pictures/学习路线.jpg" alt="图片"></p>
-<h4 id="linux-内核模块"><a href="#linux-内核模块" class="headerlink" title="linux 内核模块"></a>linux 内核模块</h4><p><img src="C:/Users/z00423761/Pictures/linux内核模块.png" alt="图片"></p>
-<h1 id="Unix基础知识"><a href="#Unix基础知识" class="headerlink" title="Unix基础知识"></a>Unix基础知识</h1><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><ul>
+        <h3 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h3><p><img src="C:/Users/z00423761/Pictures/学习路线.jpg" alt="图片"></p>
+<hr>
+<h3 id="linux-内核模块"><a href="#linux-内核模块" class="headerlink" title="linux 内核模块"></a>linux 内核模块</h3><p><img src="C:/Users/z00423761/Pictures/linux内核模块.png" alt="图片"></p>
+<hr>
+<a id="more"></a>
+<h3 id="Unix基础知识"><a href="#Unix基础知识" class="headerlink" title="Unix基础知识"></a>Unix基础知识</h3><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><ul>
 <li><p>文件描述符（小的非负整数）</p>
 <ul>
 <li><p>内核用以表示<strong>一个特定进程</strong> 正在访问当前的文件。当内核打开文件或创建时，返回一个文件描述符。</p>
@@ -339,15 +342,14 @@
 </ul>
 </li>
 </ul>
-<a id="more"></a>
 <h4 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h4><ul>
 <li>每个进程都有唯一的数字标识符，称为进程ID（非负整数）</li>
 <li><p>3个用于控制进程的主要函数</p>
-<h4 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h4><ul>
+<h5 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h5><ul>
 <li>调用<code>fork</code>创建新进程。</li>
 <li>新进程是调用进程的副本，调用进程为父进程。新创建的为子进程。</li>
-<li><code>fork</code>对父进程返回新进程的ID，对新进程返回0。<h4 id="exec"><a href="#exec" class="headerlink" title="exec"></a>exec</h4></li>
-<li>子进程调用 <code>ecexlp</code> 执行从标准输入读入的命令。<h4 id="waitpid"><a href="#waitpid" class="headerlink" title="waitpid"></a>waitpid</h4></li>
+<li><code>fork</code>对父进程返回新进程的ID，对新进程返回0。<h5 id="exec"><a href="#exec" class="headerlink" title="exec"></a>exec</h5></li>
+<li>子进程调用 <code>ecexlp</code> 执行从标准输入读入的命令。<h5 id="waitpid"><a href="#waitpid" class="headerlink" title="waitpid"></a>waitpid</h5></li>
 <li>父进程希望等待子进程终止，通过调用 <code>waitpid</code> ，参数指定要等待的进程</li>
 <li>函数返回子进程的终止状态（status变量）</li>
 </ul>
@@ -364,7 +366,8 @@
 <li>库函数可以被替换，系统函数不能被替换</li>
 </ul>
 <p><img src="C:/Users/z00423761/Pictures/系统调用.png" alt="图片"></p>
-<h1 id="文件I-O-不带缓冲的IO"><a href="#文件I-O-不带缓冲的IO" class="headerlink" title="文件I/O(不带缓冲的IO)"></a>文件I/O(不带缓冲的IO)</h1><ul>
+<hr>
+<h3 id="文件I-O-不带缓冲的IO"><a href="#文件I-O-不带缓冲的IO" class="headerlink" title="文件I/O(不带缓冲的IO)"></a>文件I/O(不带缓冲的IO)</h3><ul>
 <li>不带缓冲是指每个<code>read</code>和<code>write</code>都调用内核中的一个系统调用。</li>
 <li>五个函数：<code>open、read、write、lseek、close</code></li>
 </ul>
@@ -448,7 +451,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/20160531/how-to-start/" rel="next" title="Ubuntu系统Hexo+GithubPages搭建个人博客">
+              <a href="/2016/05/31/how-to-start/" rel="next" title="Ubuntu系统Hexo+GithubPages搭建个人博客">
                 <i class="fa fa-chevron-left"></i> Ubuntu系统Hexo+GithubPages搭建个人博客
               </a>
             
@@ -458,7 +461,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/20170812/skydive/" rel="prev" title="安装Devstack和Skydive遇到错误的解决办法">
+              <a href="/2017/08/12/skydive-installation/" rel="prev" title="安装Devstack和Skydive遇到错误的解决办法">
                 安装Devstack和Skydive遇到错误的解决办法 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -525,7 +528,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.jpg"
                alt="Xixi Zhao" />
           <p class="site-author-name" itemprop="name">Xixi Zhao</p>
            
@@ -576,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#学习路线"><span class="nav-number">1.</span> <span class="nav-text">学习路线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#linux-内核模块"><span class="nav-number">2.</span> <span class="nav-text">linux 内核模块</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unix基础知识"><span class="nav-number"></span> <span class="nav-text">Unix基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入和输出"><span class="nav-number">1.</span> <span class="nav-text">输入和输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程和线程"><span class="nav-number">2.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fork"><span class="nav-number">3.</span> <span class="nav-text">fork</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exec"><span class="nav-number">4.</span> <span class="nav-text">exec</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#waitpid"><span class="nav-number">5.</span> <span class="nav-text">waitpid</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#系统调用"><span class="nav-number">6.</span> <span class="nav-text">系统调用</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件I-O-不带缓冲的IO"><span class="nav-number"></span> <span class="nav-text">文件I/O(不带缓冲的IO)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件描述符"><span class="nav-number">1.</span> <span class="nav-text">文件描述符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#open-和-openat"><span class="nav-number">2.</span> <span class="nav-text">open 和 openat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#create"><span class="nav-number">3.</span> <span class="nav-text">create</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#close"><span class="nav-number">4.</span> <span class="nav-text">close</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lseek"><span class="nav-number">5.</span> <span class="nav-text">lseek</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#read"><span class="nav-number">6.</span> <span class="nav-text">read</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#write"><span class="nav-number">7.</span> <span class="nav-text">write</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习路线"><span class="nav-number">1.</span> <span class="nav-text">学习路线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux-内核模块"><span class="nav-number">2.</span> <span class="nav-text">linux 内核模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unix基础知识"><span class="nav-number">3.</span> <span class="nav-text">Unix基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入和输出"><span class="nav-number">3.1.</span> <span class="nav-text">输入和输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程和线程"><span class="nav-number">3.2.</span> <span class="nav-text">进程和线程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#fork"><span class="nav-number">3.2.1.</span> <span class="nav-text">fork</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#exec"><span class="nav-number">3.2.2.</span> <span class="nav-text">exec</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#waitpid"><span class="nav-number">3.2.3.</span> <span class="nav-text">waitpid</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#系统调用"><span class="nav-number">3.3.</span> <span class="nav-text">系统调用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件I-O-不带缓冲的IO"><span class="nav-number">4.</span> <span class="nav-text">文件I/O(不带缓冲的IO)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件描述符"><span class="nav-number">4.1.</span> <span class="nav-text">文件描述符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#open-和-openat"><span class="nav-number">4.2.</span> <span class="nav-text">open 和 openat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#create"><span class="nav-number">4.3.</span> <span class="nav-text">create</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#close"><span class="nav-number">4.4.</span> <span class="nav-text">close</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lseek"><span class="nav-number">4.5.</span> <span class="nav-text">lseek</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#read"><span class="nav-number">4.6.</span> <span class="nav-text">read</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#write"><span class="nav-number">4.7.</span> <span class="nav-text">write</span></a></li></ol></li></ol></div>
             
 
           </div>

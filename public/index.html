@@ -95,12 +95,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="HelloC">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="HelloC">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="HelloC">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>Hexo</title>
+  <title>HelloC</title>
   
 
 
@@ -167,7 +167,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">HelloC</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -202,22 +202,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -254,16 +254,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/skydive/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/skydive-installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xixi Zhao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="HelloC">
     </span>
 
     
@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/12/skydive/" itemprop="url">安装Devstack和Skydive遇到错误的解决办法</a></h1>
+                <a class="post-title-link" href="/2017/08/12/skydive-installation/" itemprop="url">安装Devstack和Skydive遇到错误的解决办法</a></h1>
         
 
         <div class="post-meta">
@@ -324,20 +324,14 @@
 
       
         
-          <ul>
-<li>小组三个人装skydive装了一个星期。不完全总结一下遇到的坑。。</li>
-</ul>
-<h1 id="devstack"><a href="#devstack" class="headerlink" title="devstack"></a>devstack</h1><ul>
+          <p>小组三个人装skydive装了一个星期。不完全总结一下遇到的坑。。</p>
+<h2 id="Devstack"><a href="#Devstack" class="headerlink" title="Devstack"></a>Devstack</h2><ul>
 <li>代理问题</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#proxy</span></div><div class="line">git config --global http.proxy <span class="string">'socks5://127.0.0.1:1080'</span></div><div class="line">git config --global https.proxy <span class="string">'socks5://127.0.0.1:1080'</span></div><div class="line"></div><div class="line">git config --global --<span class="built_in">unset</span> http.proxy</div><div class="line">git config --global --<span class="built_in">unset</span> https.proxy</div></pre></td></tr></table></figure>
-<ul>
-<li>权限问题</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/opt/stack/devstack/lib/neutron-legacy: line 668: /opt/stack/neutron/tools/generate_config_file_samples.sh: Permission denied</div><div class="line"></div><div class="line">#solve1</div><div class="line">chown -R stack devstack</div><div class="line">chmod 770 devstack</div><div class="line">./clean.sh</div><div class="line">./stack.sh</div><div class="line"></div><div class="line">#solve2</div><div class="line">sudo chmod -R 777 xxx</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/12/skydive/#more" rel="contents">
+            <a class="btn" href="/2017/08/12/skydive-installation/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -388,16 +382,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/apue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/apue-notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xixi Zhao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="HelloC">
     </span>
 
     
@@ -407,7 +401,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/20/apue/" itemprop="url">apue</a></h1>
+                <a class="post-title-link" href="/2017/07/20/apue-notes/" itemprop="url">APUE学习笔记</a></h1>
         
 
         <div class="post-meta">
@@ -458,21 +452,13 @@
 
       
         
-          <h4 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h4><p><img src="C:/Users/z00423761/Pictures/学习路线.jpg" alt="图片"></p>
-<h4 id="linux-内核模块"><a href="#linux-内核模块" class="headerlink" title="linux 内核模块"></a>linux 内核模块</h4><p><img src="C:/Users/z00423761/Pictures/linux内核模块.png" alt="图片"></p>
-<h1 id="Unix基础知识"><a href="#Unix基础知识" class="headerlink" title="Unix基础知识"></a>Unix基础知识</h1><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><ul>
-<li><p>文件描述符（小的非负整数）</p>
-<ul>
-<li><p>内核用以表示<strong>一个特定进程</strong> 正在访问当前的文件。当内核打开文件或创建时，返回一个文件描述符。</p>
-</li>
-<li><p>每当运行一个新程序，shell返回3个文件描述符：标准输入，标准输出，标准错误。</p>
-</li>
-</ul>
-</li>
-</ul>
+          <h3 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h3><p><img src="C:/Users/z00423761/Pictures/学习路线.jpg" alt="图片"></p>
+<hr>
+<h3 id="linux-内核模块"><a href="#linux-内核模块" class="headerlink" title="linux 内核模块"></a>linux 内核模块</h3><p><img src="C:/Users/z00423761/Pictures/linux内核模块.png" alt="图片"></p>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/20/apue/#more" rel="contents">
+            <a class="btn" href="/2017/07/20/apue-notes/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -528,11 +514,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xixi Zhao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="HelloC">
     </span>
 
     
@@ -593,9 +579,8 @@
 
       
         
-          <h4 id="首先，在github里建立名字为username-github-io的repo。"><a href="#首先，在github里建立名字为username-github-io的repo。" class="headerlink" title="首先，在github里建立名字为username.github.io的repo。"></a>首先，在github里建立名字为username.github.io的repo。</h4><h3 id="安装nvm和nodejs"><a href="#安装nvm和nodejs" class="headerlink" title="安装nvm和nodejs"></a>安装nvm和nodejs</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</div><div class="line">$ nvm isntall 0.12</div></pre></td></tr></table></figure>
-<h3 id="查看nodejs版本"><a href="#查看nodejs版本" class="headerlink" title="查看nodejs版本"></a>查看nodejs版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+          <p>首先在github里建立名字为username.github.io的repo。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装nvm和nodejs</span></div><div class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</div><div class="line">$ nvm isntall 0.12</div><div class="line"></div><div class="line"><span class="comment"># 安装hexo</span></div><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/05/31/how-to-start/#more" rel="contents">
@@ -654,11 +639,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xixi Zhao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="HelloC">
     </span>
 
     
@@ -798,7 +783,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.jpg"
                alt="Xixi Zhao" />
           <p class="site-author-name" itemprop="name">Xixi Zhao</p>
            
