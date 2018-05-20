@@ -105,17 +105,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Cinder的内部架构 三个主要组成部分  cinder-api 组件负责向外提供Cinder REST API  cinder-scheduler 组件负责分配存储资源  cinder-volume 组件负责封装driver，不同的driver负责控制不同的后端存储      组件之间的RPC靠消息队列（Queue）实现  Cinder的开发工作主要集中在scheduler和driver，以便提">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/05/28/hello-world/index.html">
+<meta property="og:title" content="Cinder">
+<meta property="og:url" content="http://yoursite.com/2018/05/20/cinder/index.html">
 <meta property="og:site_name" content="HelloC">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Cinder的内部架构 三个主要组成部分  cinder-api 组件负责向外提供Cinder REST API  cinder-scheduler 组件负责分配存储资源  cinder-volume 组件负责封装driver，不同的driver负责控制不同的后端存储      组件之间的RPC靠消息队列（Queue）实现  Cinder的开发工作主要集中在scheduler和driver，以便提">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T14:52:32.981Z">
+<meta property="og:updated_time" content="2018-05-20T16:40:21.587Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Cinder">
+<meta name="twitter:description" content="Cinder的内部架构 三个主要组成部分  cinder-api 组件负责向外提供Cinder REST API  cinder-scheduler 组件负责分配存储资源  cinder-volume 组件负责封装driver，不同的driver负责控制不同的后端存储      组件之间的RPC靠消息队列（Queue）实现  Cinder的开发工作主要集中在scheduler和driver，以便提">
 
 
 
@@ -145,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/05/28/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/20/cinder/"/>
 
 
 
 
 
-  <title>Hello World | HelloC</title>
+  <title>Cinder | HelloC</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/20/cinder/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xixi Zhao">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Cinder</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-28T13:50:17+08:00">
-                2016-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T13:50:17+08:00">
+                2018-05-20
               </time>
             
 
@@ -325,15 +325,29 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="Cinder的内部架构"><a href="#Cinder的内部架构" class="headerlink" title="Cinder的内部架构"></a>Cinder的内部架构</h2><ul>
+<li><p>三个主要组成部分</p>
+<ul>
+<li><p>cinder-api 组件负责向外提供Cinder REST API</p>
+</li>
+<li><p>cinder-scheduler 组件负责分配存储资源</p>
+</li>
+<li><p>cinder-volume 组件负责封装driver，不同的driver负责控制不同的后端存储</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>组件之间的RPC靠消息队列（Queue）实现</p>
+</li>
+<li><p>Cinder的开发工作主要集中在scheduler和driver，以便提供更多的调度算法、更多的功能、以及指出更多的后端存储</p>
+</li>
+<li><p>Volume元数据和状态保存在Database中</p>
+</li>
+</ul>
+<p>![cinder-framework][<a href="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png" target="_blank" rel="external">https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png</a>]</p>
+<p>cinder内部各组件之间使用基于RabbitMQ的RPC通信。cinder-scheduler和cinder-volume分别会创建RPC连接，启动消费者线程，然后等待队列消息。当轮询查询到消息到达后，创建线程处理相关消息。</p>
+<h2 id="基本场景"><a href="#基本场景" class="headerlink" title="基本场景"></a>基本场景</h2><p>![cinder-scenario][<a href="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png" target="_blank" rel="external">https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png</a>]</p>
 
       
     </div>
@@ -358,15 +372,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/02/openstack-project/" rel="next" title="Openstack project 简介">
+                <i class="fa fa-chevron-left"></i> Openstack project 简介
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/31/how-to-start/" rel="prev" title="Ubuntu系统Hexo+GithubPages搭建个人博客">
-                Ubuntu系统Hexo+GithubPages搭建个人博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -484,7 +498,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cinder的内部架构"><span class="nav-number">1.</span> <span class="nav-text">Cinder的内部架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本场景"><span class="nav-number">2.</span> <span class="nav-text">基本场景</span></a></li></ol></div>
             
 
           </div>
